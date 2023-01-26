@@ -31,8 +31,10 @@ public class runtime {
 		*/
 		
 		try {
-			String [] cmd = { "ping" ,"google.com" ,"-t"; //Comando de apagado en linux
-			Runtime.getRuntime().exec(cmd); 
+			String [] cmd = { "ping" ,"google.com" ,"-t"
+					}; 
+		Process proceso = Runtime.getRuntime().exec(cmd);
+		proceso.waitFor();
 		} catch (IOException ioe) {
 			System.out.println (ioe);
 		}
